@@ -39,7 +39,7 @@ function update_script() {
     mv /var/lib/librespeed /var/lib/librespeed-backup
     temp_file=$(mktemp)
     curl -fsSL "https://github.com/librespeed/speedtest-rust/releases/download/v${RELEASE}/librespeed-rs-x86_64-unknown-linux-gnu.deb" -o "$temp_file"
-    dpkg -u "$temp_file"
+    $STD dpkg -u "$temp_file"
     rm -rf "$temp_file"
     rm -rf /var/lib/librespeed-backup
     echo "${RELEASE}" >/opt/"${APPLICATION}"_version.txt
