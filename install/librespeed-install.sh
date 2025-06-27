@@ -25,7 +25,7 @@ dpkg -i "librespeed-rs-x86_64-unknown-linux-gnu.deb"
 echo "${RELEASE}" >/opt/"${APPLICATION}"_version.txt
 msg_ok "Setup ${APPLICATION}"
 
-# Enable serfvice
+# Enable service
 msg_info "Enabling Service"
 systemctl enable -q --now speedtest_rs.service
 msg_ok "Enabled Service"

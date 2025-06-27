@@ -42,6 +42,7 @@ function update_script() {
     dpkg -u "$temp_file"
     rm -rf "$temp_file"
     rm -rf /var/lib/librespeed-backup
+    echo "${RELEASE}" >/opt/"${APPLICATION}"_version.txt
     msg_ok "Updated ${APP}"
 
     msg_info "Starting Service"
