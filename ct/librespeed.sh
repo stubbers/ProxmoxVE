@@ -6,7 +6,7 @@ source <(curl -s https://raw.githubusercontent.com/stubbers/ProxmoxVE/refs/heads
 # Source: https://github.com/librespeed/speedtest-rust
 
 APP="Librespeed"
-var_tags="${var_tags:-network;foss}"
+var_tags="${var_tags:-network}"
 var_cpu="${var_cpu:-1}"
 var_ram="${var_ram:-512}"
 var_disk="${var_disk:-4}"

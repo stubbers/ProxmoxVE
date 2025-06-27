@@ -17,7 +17,7 @@ update_os
 # Setup App
 msg_info "Setup ${APPLICATION}"
 RELEASE=$(curl -fsSL https://api.github.com/repos/librespeed/speedtest-rust/releases/latest | grep '"tag_name"' | sed -E 's/.*"tag_name": "v([^"]+).*/\1/')
-curl -fsSL -o "librespeed-rs-x86_64-unknown-linux-gnu.deb" "https://github.com/librespeed/speedtest-rust/releases/download/${RELEASE}/librespeed-rs-x86_64-unknown-linux-gnu.deb"
+curl -fsSL -o "librespeed-rs-x86_64-unknown-linux-gnu.deb" "https://github.com/librespeed/speedtest-rust/releases/download/v${RELEASE}/librespeed-rs-x86_64-unknown-linux-gnu.deb"
 dpkg -i "librespeed-rs-x86_64-unknown-linux-gnu.deb"
 #
 #
